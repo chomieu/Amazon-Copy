@@ -2,19 +2,22 @@ import React from 'react'
 import styled from 'styled-components'
 import SearchIcon from '@material-ui/icons/Search'
 import BasketIcon from '@material-ui/icons/ShoppingBasket'
-import LocationIcon from '@material-ui/icons/LocationOn'
+import LocationIcon from '@material-ui/icons/LocationOnOutlined'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
     <Container>
       <HeaderLogo>
-        <img alt="amazon-logo" src="https://i.imgur.com/ONkcoQP.png" />
+        <Link to="/">
+          <img alt="amazon-logo" src="https://i.imgur.com/ONkcoQP.png" />
+        </Link>
       </HeaderLogo>
 
       <HeaderAddress>
         <LocationIcon />
         <HeaderOption>
-          <OptionLineOne>Hello</OptionLineOne>
+          <OptionLineOne className="grayText">Hello</OptionLineOne>
           <OptionLineTwo>Select your address</OptionLineTwo>
         </HeaderOption>
       </HeaderAddress>
@@ -31,7 +34,7 @@ export default function Header() {
 
       <HeaderNavItems>
         <img alt="flag-icon" src="https://i.imgur.com/TpezEg5.png" />
-        
+
         <HeaderOption>
           <OptionLineOne>Hello, Chomkan</OptionLineOne>
           <OptionLineTwo>Account & Lists</OptionLineTwo>
@@ -43,8 +46,10 @@ export default function Header() {
         </HeaderOption>
 
         <HeaderOptionCart>
-          <BasketIcon />
-          <CartCount>4</CartCount>
+          <Link to="/cart">
+            <BasketIcon />
+            <CartCount>4</CartCount>
+          </Link>
         </HeaderOptionCart>
       </HeaderNavItems>
     </Container>
@@ -64,18 +69,24 @@ const HeaderLogo = styled.div`
   margin-top: 9px;
   img {
     width: 95px;
-    margin: 0 1.4rem;
+    margin: 0 1.2vw;
   }
 `
 
 const HeaderAddress = styled.div`
   display: flex;
   align-items: center;
+  .grayText {
+    color: lightgray;
+  }
+  svg {
+    transform: scaleY(0.8) translateY(5px);
+  }
 `
 
 const OptionLineOne = styled.div`
   font-size: 12px;
-  line-height: 10px;
+  line-height: 12px;
 `
 
 const OptionLineTwo = styled.div`
@@ -89,7 +100,7 @@ const HeaderSearch = styled.div`
   height: 40px;
   border-radius: 4px;
   overflow: hidden;
-  margin-right: 2rem;
+  margin-right: 2vw;
   background-color: white;
   :focus-within {
     box-shadow: 0 0 0 3px #F90;
@@ -128,21 +139,27 @@ const HeaderNavItems = styled.div`
   display: flex;
   align-items: center;
   img {
-    width: 20px;
-    height: 30px;
-    margin-right: 2rem;
+    width: 23px;
+    height: 32px;
+    margin-right: 2vw;
+    transform: translateY(5px);
   }
 `
 
 const HeaderOption = styled.div`
-  padding: 10px 2rem 10px 0;
+  padding: 10px 2vw 10px 0;
 
 `
 
 const HeaderOptionCart = styled.div`
   display: flex;
-  align-items: center;
-  padding-right: 1rem;
+  a {
+    display: flex;
+    align-items: center;
+    padding-right: 1vw;
+    color: white;
+    text-decoration: none;
+  }
 `
 
 const CartCount = styled.div`
