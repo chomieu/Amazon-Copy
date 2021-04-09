@@ -81,7 +81,7 @@ export default function Header() {
         <a href="/">Sell</a>
         <a href="/">Registry</a>
         <a href="/">Video Games</a>
-        <a href="/">Organize your backyard</a>
+        <a href="/">Shop gift ideas for Mom</a>
       </BottomContainer>
     </>
   )
@@ -94,7 +94,7 @@ const TopContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   color: white;
-  padding: 0 1.3vw;
+  padding: 0 1.15vw;
   white-space: nowrap;
 `
 
@@ -214,6 +214,8 @@ const HeaderSearchSelect = styled.select`
 const HeaderSearchInput = styled.input`
   flex-grow: 1;
   border: 0;
+  padding: 9px;
+  font-size: 15px;
   :focus {
     outline: none;
   }
