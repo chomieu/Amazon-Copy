@@ -4,19 +4,19 @@ import Product from './Product'
 
 export default function Home() {
   const [index, setIndex] = useState(0)
-  const background = ["OzYKtqw.png", "yx036J5.jpg", "qRSnFO6.png", "VpiCGQe.jpg", "CM7TloN.jpg", "fNMnTwF.jpg", "ddzukB6.jpg"]
+  const background = ["0s6yi9w.png", "yx036J5.jpg", "rfm1xew.png", "p56avpn.jpg", "CM7TloN.jpg", "fNMnTwF.jpg", "ddzukB6.jpg"]
 
   const handlePreviousBtn = () => {
     index > 0 ? setIndex(index - 1) : setIndex(6)
   }
-  
+
   const handleNextBtn = () => {
     index < 6 ? setIndex(index + 1) : setIndex(0)
   }
 
   return (
     <Container>
-      <Banner style={{backgroundImage: `url(https://i.imgur.com/${background[index]})`}}>
+      <Banner style={{ backgroundImage: `url(https://i.imgur.com/${background[index]})` }}>
         <Carousel>
           <img
             alt="previous-icon"
@@ -26,7 +26,7 @@ export default function Home() {
         <Carousel>
           <img
             alt="next-icon"
-            src="https://i.imgur.com/GRE39LY.png?2" 
+            src="https://i.imgur.com/GRE39LY.png?2"
             onClick={handleNextBtn} />
         </Carousel>
       </Banner>
@@ -57,7 +57,7 @@ const Banner = styled.div`
     height: 52px;
     width: 34px;
   }
-  `
+`
 
 const Carousel = styled.div`
   height: 250px;
@@ -66,10 +66,9 @@ const Carousel = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  `
+`
 
 const Content = styled.div`
-  background: white;
   padding: 0 10px;
   margin-top: -350px;
   display: flex;

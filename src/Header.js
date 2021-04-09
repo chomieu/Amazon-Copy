@@ -105,7 +105,7 @@ const BottomContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   color: white;
-  padding-left: 1rem;
+  padding-left: 1.3rem;
   a {
     text-decoration: none;
     color: white;
@@ -116,12 +116,13 @@ const BottomContainer = styled.div`
     white-space: nowrap;
   }
   a:last-of-type {
-    margin-left: 3rem;
+    margin: 0 1.3rem 0 3rem;
   }
   a:first-of-type, a:last-of-type {
     font-weight: bold;
   }
   a:nth-of-type(4) {
+    margin-right: -1px;
     svg {
     filter: invert(30%);
     transform: scale(0.9);
@@ -191,7 +192,7 @@ const HeaderSearch = styled.div`
   height: 40px;
   border-radius: 4px;
   overflow: hidden;
-  margin: 1vw;
+  margin: 0 1vw 0 1.5vw;
   background-color: white;
   min-width: 428px;
   :focus-within {
