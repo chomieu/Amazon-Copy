@@ -1,4 +1,4 @@
-# My-Space
+# Amazon-Copy
 
 A copy of Amazon.com built with ReactJS and Styled-Components. The purpose is to practice pixel-perfect development and pick up new libraries such as Firebase Realtime Database and Stripe eCommence.
 
